@@ -725,30 +725,42 @@ li {
   }
 
 
-.modal {
+  .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    left: 5rem;
-    top: 2rem;
-    width: 90%;
-    height: 90vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px; /* Sesuaikan lebar maksimal sesuai kebutuhan */
+    height: 80vh;
     overflow: auto;
- 	background-color: #262525;
+    background-color: #262525;
+	padding-top: 50px;
 }
-
 .modal-content {
-	margin: 5%;
+    margin: auto;
     display: flex;
-	flex-direction: coloum;
-	justify-content: center;
-	align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 80%; /* Lebar maksimal modal */
-    max-height: 90%; /* Tinggi maksimal modal */
+    max-height: auto; /* Tinggi maksimal modal */
     position: relative;
     background-color: #fff;
     padding: 20px;
+	padding-top: 50px;
+    text-align: center; /* Tambahkan perintah ini untuk memusatkan teks */
 }
+
+.modal-caption {
+    font-family: 'Font-Anda', sans-serif; /* Ganti dengan font yang Anda sukai */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Ganti dengan warna yang diinginkan */
+}
+
 /* Efek blur untuk latar belakang saat modal aktif */
 body.modal-open {
     overflow: hidden;
