@@ -110,8 +110,9 @@ li {
 		from(#0ee951),
 		to(#00dabf)
 	);
-	background-clip: text;
+	
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
@@ -120,8 +121,8 @@ li {
 .footer .fab:hover {
 	cursor: pointer;
 	background: var(--gradient);
-	background-clip: text;
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
@@ -233,8 +234,8 @@ li {
 		from(#0ee951),
 		to(#00dabf)
 	);
-	background-clip: text;
 	-webkit-background-clip: text;
+	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	transition: all 0.2s ease;
 }
@@ -263,7 +264,7 @@ li {
 /*     Home     */
 /****************/
 .home {
-	background-image: url(../assets/images/home.jpg);
+	background-image: url(../assets/images/bg.jpeg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
