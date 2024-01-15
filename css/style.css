@@ -709,93 +709,96 @@ li {
 	opacity: 1;
 	animation-duration: 0.5s;
 	animation-timing-function: ease;
-  }
-  @keyframes fadeOut{
+}
+
+@keyframes fadeOut {
 	0% {
 		opacity: 1;
-	  }
-	  100% {
+	}
+	100% {
 		opacity: 0;
-	  }
+	}
 }
 
-  .closed {
+.closed {
 	animation-name: fadeOut;
 	animation-fill-mode: forwards;
-  }
+}
 
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 800px; /* Sesuaikan lebar maksimal sesuai kebutuhan */
-    height: 80vh;
-    overflow: auto;
-    background-color: #262525;
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	max-width: 100%; /* Sesuaikan lebar maksimal sesuai kebutuhan */
+	height: auto;
+	overflow: auto;
+	background-color: #262525; /* Ganti dengan warna yang diinginkan */
 	padding-top: 50px;
 }
+
 .modal-content {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%; /* Lebar maksimal modal */
-    max-height: auto; /* Tinggi maksimal modal */
-    position: relative;
-    background-color: #fff;
-    padding: 20px;
+	margin: auto;
+	display: flex;
+	flex-direction: row; /* Mengubah ke arah baris untuk menempatkan gambar dan teks di samping */
+	justify-content: space-around; /* Menyeimbangkan ruang di sekitar elemen */
+	align-items: center;
+	max-width: 80%; /* Lebar maksimal modal */
+	max-height: auto; /* Tinggi maksimal modal */
+	position: relative;
+	background-color: #fff;
+	padding: 20px;
 	padding-top: 50px;
-    text-align: center; /* Tambahkan perintah ini untuk memusatkan teks */
 }
 
 .modal-caption {
-    font-family: 'Font-Anda', sans-serif; /* Ganti dengan font yang Anda sukai */
-    font-size: 18px;
-    font-weight: bold;
-    color: #333; /* Ganti dengan warna yang diinginkan */
+	font-family: 'Font-Anda', sans-serif; /* Ganti dengan font yang Anda sukai */
+	font-size: 18px;
+	font-weight: bold;
+	color: #333; /* Ganti dengan warna yang diinginkan */
+	text-align: left; /* Teks diatur ke kiri */
 }
 
 /* Efek blur untuk latar belakang saat modal aktif */
 body.modal-open {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 body.modal-open::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: blur(10px); /* Tingkat blur yang dapat disesuaikan */
-    z-index: -2; /* Atur agar latar belakang berada di bawah modal */
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: inherit;
+	filter: blur(10px); /* Tingkat blur yang dapat disesuaikan */
+	z-index: -2; /* Atur agar latar belakang berada di bawah modal */
 }
 
 .modal-content img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
+
 .close {
-    color: #0e0101;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
+	color: #0e0101;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 .image-description {
-    text-align: center;
-    margin-top: 20px;
+	text-align: center;
+	margin-top: 20px;
 }
+
 
 /* Animasi zoom saat memperbesar gambar */
 .card img:hover {

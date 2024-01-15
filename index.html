@@ -139,88 +139,126 @@
     </section> <!-- end of about -->
     
     <!-- Layanan -->
-    <section class="services d-flex align-items-center py-5" id="services">
-        <div class="container text-light">
-            <div class="text-center pb-4">
-                <br><br><p>LAYANAN KAMI</p>
-                <h2 class="py-2 para-light">BERIKUT ADALAH JASA YANG KAMI SEDIAKAN</h2>
+<section class="services d-flex align-items-center py-5" id="services">
+    <div class="container text-light">
+        <div class="text-center pb-4">
+            <br><br><p>LAYANAN KAMI</p>
+            <h2 class="py-2 para-light">BERIKUT ADALAH JASA YANG KAMI SEDIAKAN</h2>
+        </div>
+        <div class="row gy-4 py-2" data-aos="zoom-in">
+            <!-- Card 1 -->
+            <div class="col-lg-4">
+                <div class="card bg-transparent rounded rounded-9">
+                    <h4 class="py-2">BACKDROP</h4>
+                    <img src="assets/images/warna.jpg" alt="BACKDROP" onclick="zoomImage(this)" width="312px" height="130px">
+                </div>
             </div>
-            <div class="row gy-4 py-2" data-aos="zoom-in">
-                <!-- Card 1 -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent rounded rounded-9">
-                        <h4 class="py-2">BACKDROP</h4>
-                        <img src="assets/images/warna.jpg" alt="" onclick="zoomImage(this)" width="90%" height="65%">
-                    </div>
+            <!-- Card 2 -->
+            <div class="col-lg-4">
+                <div class="card bg-transparent rounded rounded-9">
+                    <h4 class="py-2">DIGITAL PRINTING</h4>
+                    <img src="assets/images/WhatsApp Image 2023-05-06 at 16.37.45.jpg" alt="DIGITAL PRINTING" onclick="zoomImage(this)" width="312px" height="130px">
                 </div>
-                <!-- Card 2 -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent rounded rounded-9">
-                        <h4 class="py-2">DIGITAL PRINTING</h4>
-                        <img src="assets/images/WhatsApp Image 2023-05-06 at 16.37.45.jpg" alt="" onclick="zoomImage(this)" width="80%" height="55%">
-                    </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-lg-4">
+                <div class="card bg-transparent rounded rounded-9">
+                    <h4 class="py-2">LEVELING & PANGGUNG</h4>
+                    <img src="assets/images/walikota.jpg" alt="LEVELING & PANGGUNG" onclick="zoomImage(this)" width="312px" height="130px">
                 </div>
-                <!-- Card 3 -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent rounded rounded-9">
-                        <h4 class="py-2">LEVELING & PANGGUNG</h4>
-                        <img src="assets/images/walikota.jpg" alt="" onclick="zoomImage(this)" width="80%">
-                    </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-lg-4">
+                <div class="card bg-transparent rounded rounded-9 d-flex justify-content-center">
+                    <h4 class="py-2">SOUND SYSTEM</h4>
+                    <img id="soundSystemImage" src="assets/images/OIP (4).jpeg" alt="SOUND SYSTEM" onclick="zoomImage(this)" width="312px" height="130px">
                 </div>
-                <!-- Card 4 -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent rounded rounded-9 d-flex justify-content-center">
-                        <h4 class="py-2">SOUND SYSTEM</h4>
-                        <img src="assets/images/OIP (4).jpeg" class="" onclick="zoomImage(this)" width="50%">
-                    </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-lg-4">
+                <div class="card bg-transparent rounded rounded-9">
+                    <h4 class="py-2">MINI GARDEN</h4>
+                    <img src="assets/images/taman.jpg" alt="MINI GARDEN" onclick="zoomImage(this)" width="312px" height="130px">
                 </div>
-                <!-- Card 5 -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent rounded rounded-9">
-                        <h4 class="py-2">MINI GARDEN</h4>
-                        <img src="assets/images/taman.jpg" alt="titiw" onclick="zoomImage(this)" width="60%">
-                    </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-lg-4">
+                <div class="card bg-transparent rounded rounded-9">
+                    <h4 class="py-2">LIGHTING</h4>
+                    <img src="assets/images/lighting.jpeg" alt="LIGHTING" onclick="zoomImage(this)" width="312px" height="130px">
                 </div>
-                <!-- Card 6 -->
-                <div class="col-lg-4">
-                    <div class="card bg-transparent rounded rounded-9">
-                        <h4 class="py-2">LIGHTING</h4>
-                        <img src="assets/images/lighting.jpeg" alt="" onclick="zoomImage(this)" width="75%" height="65%">
-                    </div>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of services -->
-    
-    <!-- Modal -->
-    <div class="modal" id="imageModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</section> <!-- end of services -->
+
+<!-- Modal -->
+<div class="modal" id="imageModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalContent" class="modal-content-container">
             <img id="modalImage" src="" alt="" class="img-fluid">
-            <p id="modalCaption" class="modal-caption"></p>
+            <div id="modalCaption" class="modal-caption"></div>
         </div>
     </div>
-    
-    <!-- JavaScript -->
-    <script>
-    function zoomImage(img) {
-        var modal = document.getElementById('imageModal');
-        var modalImage = document.getElementById('modalImage');
-        var modalCaption = document.getElementById('modalCaption');
-    
-        // Set src gambar dan keterangan dalam modal
-        modalImage.src = img.src;
-        modalCaption.textContent = img.previousElementSibling.textContent; // Mengambil teks dari elemen sebelumnya sebagai caption
-    
-        // Tampilkan modal
-        modal.style.display = 'block';
+</div>
+
+<!-- JavaScript -->
+<script>
+function zoomImage(img) {
+    var modal = document.getElementById('imageModal');
+    var modalImage = document.getElementById('modalImage');
+    var modalCaption = document.getElementById('modalCaption');
+
+    // Set src gambar dan keterangan dalam modal
+    modalImage.src = img.src;
+
+    // Tampilkan modal
+    modal.style.display = 'block';
+
+    // Dapatkan caption
+    var caption = getCaption(img.alt);
+
+    // Tambahkan elemen HTML ke modalCaption
+    modalCaption.innerHTML = caption;
+}
+
+function closeModal() {
+    var modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+}
+
+function getCaption(alt) {
+    // Tambahkan keterangan sesuai dengan alt dari gambar yang diklik
+    switch (alt) {
+        case 'SOUND SYSTEM':
+            return '<div class="caption-container">' +
+                   '   <div class="image-container">' +
+                   '       <img src="' + img.src + '" alt="' + alt + '" class="modal-image">' +
+                   '   </div>' +
+                   '   <div class="text-container">' +
+                   '       <h3 style="text-align: left;" > <b>SOUND SYSTEM</b></h3>' +
+                   '       <div class="wpb_text_column wpb_content_element">' +
+                   '           <div class="wpb_wrapper">' +
+                   '               <p id="u1011-5">Kami menyediakan berbagai macam paket penyewaan sound system yang dapat menyesuaikan kebutuhan acara anda. Paket sewa sound system tersebut dapat digunakan untuk indoor, outdoor dan juga panggung. Jika anda membutuhkan spesifikasi di luar paket, silahkan menghubungi kami langsung, dan akan kami berikan solusi terbaik untuk acara anda.</p>' +
+                   '               <p id="u1011-8">Speaker aktif Digital:</p>' +
+                   '               <p id="u1011-10">Rp 2.500.000/2500 Watt/day/event (minimal order) Sudah termasuk 4 Speaker, 1 Mixer dan Operator Sound</p>' +
+                   '               <p id="u1011-13">Harga tersebut diatas sudah termasuk:</p>' +
+                   '               <p id="u1011-15">1. Setting Sound System</p>' +
+                   '               <p id="u1011-17">2. Biaya Operator, dan</p>' +
+                   '               <p id="u1011-19">3. Biaya transportasi</p>' +
+                   '               <p id="u1011-21">4. 2 mic wereless</p>' +
+                   '           </div>' +
+                   '       </div>' +
+                   '   </div>' +
+                   '</div>';
+        default:
+            return '';
     }
-    
-    function closeModal() {
-        var modal = document.getElementById('imageModal');
-        modal.style.display = 'none';
-    }
-    </script>
+}
+</script>
+
+
     
 
 
@@ -428,16 +466,14 @@ $(document).ready(function(){
                 <p class="para-light">Jangan lewatkan berbagai kreativitas dan inspirasi terkini. Langganan newsletter kami untuk mendapatkan pembaruan eksklusif, berita seru, dan banyak lagi!</p>
             </div>
             <div class="col-lg-6 d-flex align-items-center" data-aos="fade-down">
-                <div class="input-group my-3">
-                    <input type="text" class="form-control p-2" placeholder="Masukkan alamat email Anda" aria-label="Email penerima">
-                    <button class="btn-secondary text-light" type="button">Langganan</button>
-                </div>
+                <form method="post" action="subscribe.php" class="input-group my-3">
+                    <input type="text" name="email" class="form-control p-2" placeholder="Masukkan alamat email Anda" aria-label="Email penerima">
+                    <button type="submit" name="langganan" class="btn-secondary text-light">Langganan</button>
+                </form>
             </div>
         </div> <!-- end of row -->
     </div> <!-- end of container -->
 </section> <!-- end of newsletter -->
-
-
 
     <!-- Contact -->
     <section class="contact d-flex align-items-center py-5" id="contact">
